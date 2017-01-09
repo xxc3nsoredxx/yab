@@ -14,7 +14,7 @@ function! YabSwitch (buf_num)
         echo "Current Buffer"
     else
         if buflisted (a:buf_num)
-            exec ":b".a:buf_num."<CR>"
+            exec ":b".a:buf_num." <CR>"
         else
             echo "No buffer at position ".a:buf_num
         endif
