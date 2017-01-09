@@ -1,6 +1,7 @@
 autocmd VimEnter * call YabInit ()
 
 function! YabInit ()
+    echol WarningMsg
     echo "Hello"
 endfunction
 
