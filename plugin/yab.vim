@@ -1,11 +1,10 @@
 autocmd VimEnter * call YabInit ()
 
 function! YabInit ()
-    let g:a = 1
-    if exists ("g:yab_key_override")
-        let g:a = g:a + 1
+    if !exists ("g:yab_key_override")
+        nnoremap <M-1> :b 1 <CR>
     endif
-    let g:a = g:a + 1
+    finish
 endfunction
 
 function! YabSwitch (tab_num)
