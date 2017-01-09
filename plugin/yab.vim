@@ -1,4 +1,4 @@
-" Written by: Oskari Pirhonen
+" Written by: xxc3nsoredxx
 " Some of the code is based on code from the plugin 'bufpos' found here:
 " http://www.vim.org/scripts/script.php?script_id=1836
 "
