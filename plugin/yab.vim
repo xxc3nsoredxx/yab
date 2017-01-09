@@ -19,7 +19,7 @@ function! YabInit ()
         exec "nnoremap <M-0> :call YabSwitch (10)<CR>"
 
         " Map M-F1 to add buffer
-        exec "nnoremap <M-F1> :call YabAdd ()"
+        exec "nnoremap <M-F1> :call YabAdd ()<CR>"
     endif
 endfunction
 
