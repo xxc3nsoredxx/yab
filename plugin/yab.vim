@@ -1,8 +1,9 @@
 autocmd VimEnter * call YabInit ()
 
 function! YabInit ()
-    echol WarningMsg
+    echohl WarningMsg
     echo "Hello"
+    echohl None
 endfunction
 
 function! YabSwitch (tab_num)
