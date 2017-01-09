@@ -9,10 +9,14 @@ function! YabInit ()
     endif
 endfunction
 
-function! YabSwitch (tab_num)
-    if a:tab_num == bufnr ("%")
+function! YabSwitch (buf_num)
+    if a:buf_num == bufnr ("%")
         echo "Current Buffer"
     else
-        echo a:tab_num
+        if buflisted (a:buf_num)
+            exec ":b".buf_num."<CR>"
+        else
+            echo "No buffer at position ".buf_num
+        endif
     endif
 endfunction
