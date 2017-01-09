@@ -48,6 +48,7 @@ function! YabAdd ()
     for cx in range (1, bufnr ("$"))
         if !buflisted (cx)
             let l:pos = cx
+            echo "Open buffer at position ".l:pos
             break
         endif
     endfor
@@ -60,6 +61,4 @@ function! YabAdd ()
 
         return
     endif
-
-    echo "Open buffer at position ".l:pos
 endfunction
