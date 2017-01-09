@@ -18,8 +18,9 @@ function! YabInit ()
         endfor
         exec "nnoremap <M-0> :call YabSwitch (10)<CR>"
 
+        " Set function key codes to mean something else, it's weird
         " Map M-F1 to add buffer
-        exec "nnoremap <M-F1> :call YabAdd ()<CR>"
+        exec "nnoremap <F1> :call YabAdd ()<CR>"
     endif
 endfunction
 
