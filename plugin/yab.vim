@@ -2,9 +2,13 @@ autocmd VimEnter * call YabInit ()
 
 function! YabInit ()
     if !exists ("g:yab_key_override")
-        nnoremap <M-1> :b 1 <CR>
+        for cx in range (1, 9)
+            exec "nnoremap <M-".cx."> :call YabSwitch (".cx.")<CR>"
+        endfor
+        exec "nnoremap <M-0> :call YabSwitch (10)<CR>"
     endif
 endfunction
 
 function! YabSwitch (tab_num)
+    echo a:tab_num
 endfunction
