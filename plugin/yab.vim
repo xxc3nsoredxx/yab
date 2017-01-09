@@ -18,7 +18,6 @@ function! YabInit ()
         endfor
         exec "nnoremap <M-0> :call YabSwitch (10)<CR>"
 
-        " Set function key codes to mean something else, it's weird
         " Map M-F1 to add buffer
         exec "nnoremap <F1> :call YabAdd ()<CR>"
     endif
@@ -43,20 +42,19 @@ endfunction
 " Function to add a buffer if there are < 10
 " Called by M-F1
 function! YabAdd ()
-    echo "test"
-    let l:pos = -1
+    let pos = -1
 
     " Find the first open buffer
     for cx in range (1, bufnr ("$"))
         if !buflisted (cx)
-            let l:pos = cx
-            echo "Open buffer at position ".l:pos
+            let pos = cx
+            echo "Open buffer at position ".pos
             break
         endif
     endfor
 
     " Error if no open buffer found
-    if l:pos == -1
+    if pos == -1
         echohl ErrorMsg
         echo "No open buffers found."
         echohl None
