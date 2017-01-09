@@ -10,5 +10,9 @@ function! YabInit ()
 endfunction
 
 function! YabSwitch (tab_num)
-    echo bufnr ("$")
+    if a:tab_num == bufnr ("%")
+        echo "Current Buffer"
+    else
+        echo a:tab_num
+    endif
 endfunction
