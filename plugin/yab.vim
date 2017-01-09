@@ -18,7 +18,7 @@ function! YabInit ()
         endfor
         exec "nnoremap <M-0> :call YabSwitch (10)<CR>"
 
-        " Map M-F1 to add buffer
+        " Map F1 to add buffer
         exec "nnoremap <F1> :call YabAdd ()<CR>"
     endif
 endfunction
@@ -40,7 +40,7 @@ function! YabSwitch (buf_num)
 endfunction
 
 " Function to add a buffer if there are < 10
-" Called by M-F1
+" Called by F1
 function! YabAdd ()
     let pos = -1
 
