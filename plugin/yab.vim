@@ -10,5 +10,5 @@ function! YabInit ()
 endfunction
 
 function! YabSwitch (tab_num)
-    echo a:tab_num
+    echo bufnr ("$")
 endfunction
