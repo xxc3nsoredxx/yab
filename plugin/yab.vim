@@ -1,4 +1,4 @@
-autocmd VimEnter * call yab_init ()
+autocmd VimEnter * call YabInit ()
 
 function! YabInit ()
     if exists (g:yab_key_override)
