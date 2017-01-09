@@ -1,11 +1,11 @@
 autocmd VimEnter * call yab_init
 
-function! yab_init ()
+function! YabInit ()
     if exists (g:yab_key_override)
         echo "Key override active"
         finish
     endif
 endfunction
 
-function! yab_switch (tab_num)
+function! YabSwitch (tab_num)
 endfunction
