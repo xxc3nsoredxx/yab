@@ -42,6 +42,7 @@ endfunction
 " Function to add a buffer if there are < 10
 " Called by M-F1
 function! YabAdd ()
+    echo "test"
     let l:pos = -1
 
     " Find the first open buffer
