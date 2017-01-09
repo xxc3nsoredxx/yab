@@ -1,9 +1,11 @@
 autocmd VimEnter * call YabInit ()
 
 function! YabInit ()
-    echohl WarningMsg
-    echo "Hello"
-    echohl None
+    let a = 1
+    if exists ("g:yab_key_override")
+        let a = a + 1
+    endif
+    let a = a + 1
 endfunction
 
 function! YabSwitch (tab_num)
