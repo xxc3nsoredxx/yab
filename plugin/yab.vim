@@ -49,6 +49,9 @@ function! YabAdd ()
         if !buflisted (cx)
             let pos = cx
             echo "Open buffer at position ".pos
+            if cx == bufnr ("$")
+                echo "Buffer at last position"
+            endif
             break
         endif
     endfor
