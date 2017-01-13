@@ -48,9 +48,9 @@ function! YabAdd ()
     for cx in range (1, 10)
         if !buflisted (cx)
             let pos = cx
-            inputsave ()
+            call inputsave ()
             let fname = input ("Enter the filename: ")
-            inputrestore ()
+            call inputrestore ()
             echo "Openning '".fname."' into buffer ".pos
             if cx >= bufnr ("$")
                 echo "Buffer at last position"
