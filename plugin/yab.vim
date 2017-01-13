@@ -51,6 +51,7 @@ function! YabAdd ()
             call inputsave ()
             let fname = input ("Enter the filename: ")
             call inputrestore ()
+            echo
             echo "Openning '".fname."' into buffer ".pos
             if cx >= bufnr ("$")
                 echo "Buffer at last position"
